@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Secured Net Banking</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="https://img.icons8.com/color/48/000000/card-security.png" rel="icon" type="image/gif">
+
+    <!-- User CSS -->
+    <link href="css/splash.css" media="all" rel="stylesheet">
+    <link href="css/name.css" media="all" rel="stylesheet">
+
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+
+    <!-- Font Awesome library -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+</head>
+<body onload="setTimeout(loader,3500)">
+
+<!--    Preloader Code  -->
+<div class="container-fluid h-100 w-100" id="preloader">
+    <div class="position-absolute top-50 start-50 translate-middle" id="images">
+        <video class="start_icon" preload loop muted autoplay>
+            <source src="img/loading.webm" type="video/webm">
+        </video>
+    </div>
+    <div id="wrapper">
+        <h1 class="glitch" data-text="vouldermout ">vouldermout </h1>
+    </div>
+</div>
+
+<!--    Main Code  -->
+<div class="container-fluid w-100" id="outer-container" style="display: none">
+    <!--    Login & Signup Code  -->
+    <div class="login-image top-20 start-50 translate-middle" id="login-image">
+        <div class="container">
+            <form class="signIn active-dx" id="login" action="http://localhost:6006/timer" method="post">
+                <h3>Welcome<br>Back !</h3>
+                <br><br>
+                <input type="text" id="log-name" placeholder="Username" name="user" autocomplete='off' required/>
+                <input type="password" id="log-pass" placeholder="Password" style="margin-top: 25px;" name="password"
+                       required/>
+                <button class="form-btn sx back" type="button">New ?</button>
+                <button class="form-btn dx" type="submit">Log In</button>
+            </form>
+            <form class="signUp inactive-sx" id="signup">
+                <h3>Create Your Account</h3>
+                <p>Welcome U !</p>
+                <label for="sign-name" style="float: right">
+                    <img id="availusr" src="img/green.png" style="display: none" alt="Availability" width="20px">
+                </label><input class="w100" id="sign-name" type="text" placeholder="Username" name="user" required
+                               autocomplete='off'/>
+                <label for="sign-pass">
+                    <img id="availpass" src="img/green.png" style="display: none" alt="Availability" width="20px">
+                </label><input type="password" id="sign-pass" placeholder="Password" name="pass" required/>
+                <label for="sign-repass">
+                    <img id="availrepass" src="img/green.png" style="display: none" alt="Availability" width="20px">
+                </label><input type="password" id="sign-repass" placeholder="Retype Password" name="repass" required/>
+                <button class="form-btn sx log-in" type="button">Log In</button>
+                <button class="form-btn dx" type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <!--    Menu Code   -->
+    <div class="menu-container" id="mymenu" style="display:none">
+        <section class="menu menu--circle" id="menu__section">
+            <input type="checkbox" id="menu__active"/>
+            <label for="menu__active" class="menu__active">
+                <div class="menu__toggle" id="menu__toggle">
+                    <div class="icon">
+                        <div class="hamburger"></div>
+                    </div>
+                </div>
+                <input type="radio" name="arrow--up" id="degree--up-0"/>
+                <input type="radio" name="arrow--up" id="degree--down-0"/>
+                <div class="menu__listings" id="menu__listings">
+                    <ul class="circle">
+                        <li>
+                            <div class="placeholder">
+                                <div class="upside">
+                                    <a class="button"><i class="fa"></i></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="placeholder">
+                                <div class="upside">
+                                    <a class="button" id="user-btn"><img class="img_child2" src="img/user.gif"
+                                                                         width="50 px"/></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="placeholder">
+                                <div class="upside">
+                                    <a>&nbsp</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="placeholder">
+                                <div class="upside" id="export-btn">
+                                    <a class="button"><img class="img_child4"
+                                                           src="https://img.icons8.com/color/48/000000/export-csv.png"/></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="placeholder">
+                                <div class="upside">
+                                    <a class="button"><i class="fa"></i></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="placeholder">
+                                <div class="upside">
+                                    <a class="button" id="export-btn2"><img class="img_child6" src=""
+                                                                            width="50 px"/></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="placeholder">
+                                <div class="upside">
+                                    <a class="button" id="import-btn"><img class="img_child7"
+                                                                           src="https://img.icons8.com/color/48/000000/import-csv.png"/></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="placeholder">
+                                <div class="upside">
+                                    <a class="button"></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="placeholder">
+                                <div class="upside">
+                                    <a class="button" id="import-btn2"><img class="img_child9" src=""
+                                                                            width="50 px"/></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="placeholder">
+                                <div class="upside">
+                                    <a id="logout_btn" class="button"><img class="img_child10" src="img/logout.gif"
+                                                                           width="50 px"/></a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu__arrow menu__arrow--top" id="m_arr_up">
+                    <ul>
+                        <li>
+                            <label for="degree--up-0">
+                                <div class="arrow"></div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu__arrow menu__arrow--bottom" id="m_arr_down">
+                    <ul>
+                        <li>
+                            <label for="degree--down-0">
+                                <div class="arrow"></div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </label>
+        </section>
+    </div>
+
+    <!--    Bank Display Code   -->
+    <div class="container timer_outer" id="mybanks" style="display: none">
+        <div class="row timer_main">
+            <div class="row m-3 running_task" id="running_task">
+                <div class="col-7 runt_name">
+                    <h3 id="runt_nameH">Task - X</h3>
+                    <div class="col-8 runt_desc">
+                        <p id="runt_descH">Description X</p>
+                    </div>
+                </div>
+                <div class="col-5 runt_icon">
+                    <a title="Start/Stop Timer" class="play" id="play-btn" style="display: none"></a>
+                    <img src="https://img.icons8.com/flat-round/64/000000/stop.png" class="stop-btn m-2"
+                         style="display: block"
+                         id="stop-btn">
+                    <div class="col-5 runt_time">
+                        <h4 id="runt_timeH">00: 00: 00</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--    Footer Code     -->
+    <footer class="col-11 footer-16371" id="my-foot" style="display: none">
+        <div class="container-foot">
+            <div class="row justify-content-center">
+                <div class="col-md-9 text-center">
+                    <div class="footer-site-logo mb-4">
+                        <a href="#">SecureNet</a>
+                    </div>
+                    <ul class="list-unstyled nav-links mb-5" id="nav-links">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Legal</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+
+                    <div class="social mb-4">
+                        <h3>Stay in Touch</h3>
+                        <ul class="list-unstyled">
+                            <li class="in"><a href="#"><span class="icon-instagram"><img src="https://img.icons8.com/fluency/50/000000/instagram-new.png"/></span></a></li>
+                            <li class="fb"><a href="#"><span class="icon-facebook"><img src="https://img.icons8.com/fluency/48/000000/facebook-new.png"/></span></a></li>
+                            <li class="tw"><a href="#"><span class="icon-twitter"><img src="https://img.icons8.com/fluency/48/000000/twitter.png"/></span></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="copyright">
+                        <p class="mb-0"><small>© SecureNet. All Rights Reserved.</small></p>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--    Page Transition Code  -->
+    <div class="trans-container h-100 w-100" id="pg_trans">
+        <div class="top-layer"></div>
+        <div class="top-layer top-layer--2"></div>
+        <div class="top-layer top-layer--3"></div>
+        <div class="top-layer top-layer--4"></div>
+        <div class="top-layer top-layer--5"></div>
+    </div>
+    <div class="trans-container h-100 w-100" id="pg_trans_bot">
+        <div class="bottom-layer"></div>
+        <div class="bottom-layer bottom-layer--2"></div>
+        <div class="bottom-layer bottom-layer--3"></div>
+    </div>
+
+</div>
+
+<!--    New Modal Code  -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">New User Details
+                    <img class="tlog_edit" width="35px" height="35px"
+                         src="https://img.icons8.com/color/48/000000/user-male-circle--v2.png"/></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="g-3 needs-validation" id="updateUser" novalidate>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="newMobile" placeholder="Mobile Number"
+                               required autocomplete="off">
+                        <label for="newMobile" class="">Mobile Number</label>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="newMail" placeholder="Mail ID"
+                               required autocomplete="off">
+                        <label for="newMail">Mail ID</label>
+                        <div class="valid-feedback">
+                            Sweet!
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="newAadhar" placeholder="Aadhar" required
+                               autocomplete="off">
+                        <label for="newAadhar">Aadhar</label>
+                        <div class="valid-feedback">
+                            Nice!
+                        </div>
+                    </div>
+                    <div class="form-floating create-btn">
+                        <button type="submit" class="btn btn-primary">Update !</button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="newClose" class="btn btn-secondary" data-bs-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<button class="btn btn-primary" data-bs-toggle="modal" href="#exampleModal" id="exModalbtn" role="button"
+        hidden></button>
+
+<!--    User Modal Code  -->
+<div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img class="tlog_edit" width="35px" height="35px"
+                     src="https://img.icons8.com/color/48/000000/information--v2.png"/>
+                <h5 class="modal-title" id="userModalLabel">Hi User!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="g-3 needs-validation" id="detailsUser" novalidate>
+                    <div class="form-floating mb-3" id="verifyMobile">
+                        <input type="text" class="form-control" id="userMobile" placeholder="Mobile Number"
+                               required autocomplete="off" disabled>
+                        <label for="newMobile" class="">Mobile Number</label>
+                        <img id="usrverify" src="img/red.png" alt="Availability" width="20px">
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="userMail" placeholder="Mail ID"
+                               required autocomplete="off" disabled>
+                        <label for="newMail">Mail ID</label>
+                        <div class="valid-feedback">
+                            Sweet!
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="userAadhar" placeholder="Aadhar" required
+                               autocomplete="off" disabled>
+                        <label for="newAadhar">Aadhar</label>
+                        <div class="valid-feedback">
+                            Nice!
+                        </div>
+                    </div>
+                    <div class="form-floating user-btn" id="userbtns">
+                        <button type="submit" class="btn mx-3 btn-primary verify" id="userVerify">Verify !</button>
+                        <button type="submit" class="btn mx-3 btn-primary mpin" id="userMpin">Set MPIN !</button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="userClose" class="btn btn-secondary" data-bs-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<button class="btn btn-primary" data-bs-toggle="modal" href="#userModal" id="usrModalbtn" role="button"
+        hidden></button>
+
+<!-- Mpin modal -->
+<div class="modal fade" id="mpinModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="mpinModalLabel">Set MPIN
+                    <img class="tlog_edit" width="35px" height="35px"
+                         src="https://img.icons8.com/ios/50/000000/pin--v2.png"/></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="mpinbody">
+                <form class="g-3 needs-validation" id="mpinForm" novalidate>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="typempin" placeholder="Mobile Number"
+                               required autocomplete="off" maxlength="4">
+                        <label for="typempin" class="">MPIN</label>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="retypempin" placeholder="Mail ID"
+                               required autocomplete="off" maxlength="4">
+                        <label for="retypempin">Retype MPIN</label>
+                        <div class="valid-feedback">
+                            Sweet!
+                        </div>
+                    </div>
+                    <h4 class="mpin-error" id="mpinerror"></h4>
+                    <div class="form-floating mpin-btn">
+                        <button type="submit" class="btn btn-primary mpin">SET !</button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="mpinClose" class="btn btn-secondary" data-bs-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<button class="btn btn-primary" data-bs-toggle="modal" href="#mpinModal" id="mpinModalbtn" role="button"
+        hidden></button>
+
+<!-- OTP modal -->
+<div class="modal fade" id="mobileModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="mobileVerify">Verify Mobile
+                    <img class="tlog_edit" width="35px" height="35px"
+                         src="https://img.icons8.com/color/48/000000/approval--v3.png"/></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="mobileBody">
+                <form class="g-3 needs-validation" id="mobileForm" novalidate>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="mobileOtp" placeholder="Enter OTP"
+                               required autocomplete="off" maxlength="6">
+                        <label for="typempin" class="">Enter OTP</label>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+
+                    <h4 class="mpin-error" id="otpError"></h4>
+                    <div class="form-floating mpin-btn">
+                        <button type="submit" class="btn btn-primary mpin">Verify !</button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="mobileClose" class="btn btn-secondary" data-bs-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<button class="btn btn-primary" data-bs-toggle="modal" href="#mobileModal" id="mobileModalbtn" role="button"
+        hidden></button>
+<!--    Alerts Code  -->
+<div class="alert alert-warning alert-dismissible fade in show" role="alert" style="display:none" id="useralert">
+    <button type="button" class="btn-close" aria-label="Close" id="alertcloser"></button>
+    <strong><img src="img/cool.gif" alt="Search" width="40px">Hey You!</strong>
+    <p>Check your Credentials.<img src="img/think.gif" alt="Search" width="40px"></p>
+</div>
+
+<div class="alert alert-warning alert-dismissible fade in show" role="alert" style="display:none" id="successalert">
+    <button type="button" class="btn-close" aria-label="Close" id="successcloser"></button>
+    <strong><img id="userimg" src="img/wink.gif" alt="Search" width="40px"><span id="succ_span">Hey You!</span></strong>
+    <p><span id="alert_uname">Check your Credentials.</span><img src="img/hug.gif" alt="Search" width="50px"></p>
+</div>
+
+
+</body>
+<!-- Pre-Loader Script -->
+<script>
+    function loader() {
+        $('link[rel=stylesheet][href*="css/splash.css"]').remove();
+        $('link[rel=stylesheet][href*="css/name.css"]').remove();
+        $('head').append('<link href="css/style.css" media="all" rel="stylesheet">');
+        $('#preloader').hide().delay(3000).fadeOut(1000);
+        $('#outer-container').show().delay(3000).fadeIn(1000);
+    }
+</script>
+
+<!-- User JS -->
+<script src="js/script.js"></script>
+<script src="js/menu.js"></script>
+</html>

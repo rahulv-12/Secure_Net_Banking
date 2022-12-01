@@ -1,0 +1,506 @@
+@import 'https://fonts.googleapis.com/css?family=Indie+Flower';
+@import 'https://fonts.googleapis.com/css?family=Andada+Pro';
+@import 'https://fonts.googleapis.com/css?family=Merienda';
+@import 'https://fonts.googleapis.com/css?family=Festive';
+@import url('login.css');
+
+* {
+    font-style: normal;
+    transition: all 0.3s ease-in-out;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #FA8BFF;
+    background-image: linear-gradient(
+            45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+    box-shadow: inset 0 0 6px rgb(0 0 0 0.66);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: mintcream;
+    border-radius: 5px;
+}
+
+#outer-container {
+    height: 110vh;
+    background: #24246e;
+    background: radial-gradient(circle, rgba(36, 36, 110, 0.751), rgba(28, 113, 175, 0.751));
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.modal-header {
+    font-family: Merienda, cursive;
+}
+
+.modal-body {
+    font-family: Festive, cursive;
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    height: 70vh;
+}
+
+#create_task_form {
+    height: 60vh;
+    position: relative;
+    background: linear-gradient(220deg, #e5f87b, #f8f9facf);
+}
+
+.form-floating input {
+    font-family: 'Montserrat', serif;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.form-floating textarea {
+    font-family: 'Montserrat', serif;
+    padding-top: 30px;
+}
+
+.create-btn {
+    margin-top: 12vh;
+}
+
+.create-btn button {
+    background-image: linear-gradient(to right, #FF8008 0%, #FFC837 51%, #FF8008 100%);
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 20px;
+    border: 0;
+}
+
+.create-btn button:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+.edit-btn button {
+    background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA 51%, #1FA2FF 100%);
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 20px;
+    border: 0;
+}
+
+.edit-btn button:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+
+#del-btn {
+    background-image: linear-gradient(to right, #FF4E50 0%, #F9D423 51%, #FF4E50 100%);
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 20px;
+    border: 0;
+}
+
+#del-btn:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+
+#createTaskName, #createTaskDesc {
+    background: ghostwhite;
+}
+
+#edit_task_form {
+    height: 60vh;
+    position: relative;
+    background: beige;
+    background: linear-gradient(31deg, #0dcaf075, #f9fafbd9);
+}
+
+#editTaskTime {
+    font-size: 20px;
+}
+
+.form-floating > .form-control:focus, .form-floating > .form-control:not(:placeholder-shown) {
+    padding-top: 35px;
+}
+
+.modal-content {
+    background: aliceblue;
+}
+
+div[id='editModal'] div[class='modal-content'] {
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+div[id='exampleModal'] div[class='modal-content'] {
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+#usrverify {
+    margin-left: 5px;
+}
+
+#userbtns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 9vh;
+}
+
+#verifyMobile {
+    display: flex;
+    align-items: baseline;
+}
+
+.user-btn .verify {
+    font-family: cursive;
+    background-image: linear-gradient(to right, #4CB8C4 0%, #3CD3AD 51%, #4CB8C4 100%);
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 20px;
+    border: 0;
+}
+
+
+.user-btn .verify:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.user-btn .mpin {
+    font-family: cursive;
+    background-image: linear-gradient(to right, #24C6DC 0%, #514A9D 51%, #24C6DC 100%);
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 20px;
+    border: 0;
+}
+
+
+.user-btn .mpin:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+.mpin-btn .mpin {
+    font-family: cursive;
+    background-image: linear-gradient(to right, #24C6DC 0%, #514A9D 51%, #24C6DC 100%);
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 20px;
+    border: 0;
+}
+
+
+.mpin-btn .mpin:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+#mpinForm {
+    height: 30vh;
+    font-family: Montserrat, serif;
+}
+
+#mpinbody {
+    height: 54vh;
+}
+
+#mpinerror {
+    font-family: Montserrat, serif;
+    color: red;
+}
+
+#mobileBody {
+    height: 40vh;
+}
+
+#mobileForm {
+    height: 40vh;
+}
+
+/*  Main Timer Styles   */
+
+.timer_outer {
+    height: 50vh;
+    width: 80%;
+    top: 90px;
+    left: 11vw;
+    margin: auto;
+    position: absolute;
+    z-index: 1;
+    background: cornsilk;
+    background: -webkit-linear-gradient(to bottom, #FFF8DCFF, #E8D58AFF); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #FFF8DCFF, #E8D58AFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: 3px solid dodgerblue;
+    border-radius: 20px;
+
+}
+
+.timer_main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.create_new {
+    height: 17vh;
+    width: 13vw;
+    cursor: pointer;
+    font-family: Indie Flower, cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #16A085; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F4D03F, #16A085); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F4D03F, #16A085); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: 400% 400%;
+    animation: gradient 3s linear infinite;
+    border-radius: 18px;
+}
+
+.plus_img {
+    align-self: flex-start;
+}
+
+.logs_outer {
+    margin-right: 5px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    height: 40vh;
+    justify-content: center;
+    align-content: flex-start;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.empty-icon {
+    width: 200px;
+}
+
+.logs_head {
+    align-self: flex-end;
+    position: sticky;
+    text-align: center;
+    writing-mode: vertical-rl;
+    top: 0;
+    justify-self: flex-end;
+    padding: 0;
+}
+
+.logs_head h2 {
+    font-family: Indie Flower, cursive;
+    margin: 0;
+}
+
+.running_task {
+    padding-left: 20px;
+    align-self: flex-start;
+    border: 2px solid midnightblue;
+    border-radius: 18px;
+    background: lavenderblush;
+    background: linear-gradient(40deg, #FFF0F5FF, #cfcff3);
+    animation: gradient 3.5s alternate infinite;
+    width: 80%;
+    box-shadow: 11px 10px 24px rgb(210, 208, 208), 0 2px 20px white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.runt_name {
+    margin-top: 15px;
+}
+
+.runt_name h3 {
+    text-transform: initial;
+    margin: 0;
+    font-family: Merienda, cursive;
+    color: #392338;
+}
+
+.runt_desc {
+    border-top: 1px dotted black;
+    margin-top: 15px;
+}
+
+.runt_desc p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.runt_icon {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: center;
+}
+
+.runt_time {
+    width: 16vw;
+    text-align: center;
+    font-family: Andada Pro, serif;
+    border-top: 1px dashed black;
+
+}
+
+.runt_time h4 {
+    font-size: 30px;
+}
+
+.runt_time h4:hover {
+    font-style: italic;
+}
+
+
+a {
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+}
+
+a, a:hover {
+    text-decoration: none !important;
+}
+
+.content {
+    height: 70vh;
+}
+
+#my-foot, .footer-16371 {
+    width: 98vw;
+    bottom: -70px;
+    position: absolute;
+    display: flex;
+    font-family: "Merienda", sans-serif;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    background: #f0f8ffa8;
+    justify-content: center;
+}
+
+.footer-16371 .footer-site-logo {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.footer-16371 .footer-site-logo a {
+    color: #4200ff;
+}
+
+.footer-16371 .nav-links {
+    padding: 0;
+    margin: 0;
+}
+
+#nav-links {
+    margin: 0;
+}
+
+.footer-16371 .nav-links li {
+    display: inline-block;
+}
+
+.footer-16371 .nav-links li a {
+    padding: 10px;
+    color: #000;
+}
+
+.footer-16371 .nav-links li a:hover {
+    color: #4200ff;
+}
+
+.footer-16371 .social h3 {
+    font-weight: bold;
+    font-size: 18px;
+    color: #000;
+    margin: 10px;
+}
+
+.footer-16371 .social ul li {
+    display: inline-block;
+}
+
+.footer-16371 .social ul li a {
+    display: inline-block;
+    padding: 10px;
+}
+
+.footer-16371 .social ul li.in a {
+    color: #df588a;
+}
+
+.footer-16371 .social ul li.tw a {
+    color: #15b8ff;
+}
+
+.footer-16371 .social ul li.fb a {
+    color: #3742d0;
+}
+
+.footer-16371 .social ul li.dr a {
+    color: #fa38c1;
+}
+
+.footer-16371 .social ul li.pin a {
+    color: #dd4d5a;
+}
+
+.footer-16371 .copyright {
+    color: #999999;
+}
+
+#runt_timeH {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+#stop-btn {
+    width: 100px;
+}
+

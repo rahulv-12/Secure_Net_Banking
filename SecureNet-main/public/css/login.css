@@ -1,0 +1,368 @@
+@import 'https://fonts.googleapis.com/css?family=Lato|Nunito:300,400';
+@import 'https://fonts.googleapis.com/css?family=Nunito';
+
+
+body {
+    background: #191970D1;
+}
+
+.container {
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 20vh;
+    left: calc(100% - 160px);
+}
+
+form {
+    position: absolute;
+    text-align: center;
+    background: #fff;
+    width: 310px;
+    height: 470px;
+    border-radius: 5px;
+    padding: 30px 20px 0 20px;
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+}
+
+p {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: palevioletred;
+    margin-bottom: 40px;
+}
+
+p > span {
+    padding-top: 3px;
+    display: block;
+    font-weight: 400;
+    font-size: 9px;
+}
+
+h3 {
+    font-family: 'Lato';
+    font-size: 35px;
+    text-transform: uppercase;
+    color: palevioletred;
+    margin-bottom: 30px;
+}
+
+input,
+button {
+    outline: none !important;
+}
+
+button.fb {
+    border: none;
+    background: #3b5998;
+    width: 160px;
+    height: 25px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 4px;
+    border: 1px solid #29487d;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: all 0.3s linear;
+}
+
+button.fb:hover {
+    background: #fff;
+    color: #3b5998;
+}
+
+button.form-btn {
+    position: absolute;
+    width: 50%;
+    height: 60px;
+    bottom: 0;
+    border: 0;
+    font-family: 'Lato';
+    font-size: 24px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+button.form-btn.sx {
+    left: 0;
+    border-radius: 0 0 0 5px;
+    background-color: rgba(72, 61, 139, 0.35);
+    color: #fff;
+    transition: all 0.3s linear;
+}
+
+button.form-btn.sx:hover {
+    background-color: rgba(72, 61, 139, 0.65);
+    color: #fff;
+}
+
+button.form-btn.sx.back {
+    background-color: rgba(0, 0, 0, 0.15);
+    transition: all 0.3s linear;
+}
+
+button.form-btn.sx.back:hover {
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+button.form-btn.dx {
+    right: 0;
+    border-radius: 0 0 5px 0;
+    background-color: darkslateblue;
+    color: #fff;
+}
+
+button.form-btn.dx:hover {
+    background: radial-gradient(circle, #fff, #483D8BFF);
+    color: darkslateblue;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid rgba(25, 25, 112, 0.82);
+    width: 85%;
+    font-family: 'Nunito';
+    color: midnightblue;
+    text-align: center;
+    font-size: 21px;
+    font-weight: 100;
+    margin-bottom: 25px;
+}
+
+::-webkit-input-placeholder {
+    color: #191970D1;
+    font-family: 'Nunito';
+    font-weight: 100;
+}
+
+:-moz-placeholder {
+    color: #191970D1;
+    font-family: 'Nunito';
+    font-weight: 100;
+}
+
+::-moz-placeholder {
+    color: #191970D1;
+    font-family: 'Nunito';
+    font-weight: 100;
+}
+
+:-ms-input-placeholder {
+    color: #191970D1;
+    font-family: 'Nunito';
+    font-weight: 100;
+}
+
+.signIn input,
+.signUp .w100 {
+    width: 100%;
+}
+
+.signIn {
+    z-index: 1;
+    transform: perspective(100px) translate3d(100px, 0px, -30px);
+    opacity: 0.5;
+}
+
+.signUp {
+    z-index: 2;
+}
+
+.active-dx {
+    animation-name: foregrounding-dx;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+}
+
+.active-sx {
+    animation-name: foregrounding-sx;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+}
+
+.inactive-dx {
+    animation-name: overshadowing-dx;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+}
+
+.inactive-sx {
+    animation-name: overshadowing-sx;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes overshadowing-dx {
+    0% {
+        z-index: 2;
+        transform: perspective(100px) translate3d(0px, 0px, 0px);
+        opacity: 1;
+        box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
+    }
+    100% {
+        z-index: 1;
+        transform: perspective(100px) translate3d(100px, 0px, -30px);
+        opacity: 0.5;
+        box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25);
+    }
+}
+
+@keyframes overshadowing-sx {
+    0% {
+        z-index: 2;
+        transform: perspective(100px) translate3d(0px, 0px, 0px);
+        opacity: 1;
+        box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
+    }
+    100% {
+        z-index: 1;
+        transform: perspective(100px) translate3d(-100px, 0px, -30px);
+        opacity: 0.5;
+        box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25);
+    }
+}
+
+@keyframes foregrounding-dx {
+    0% {
+        z-index: 1;
+        transform: perspective(100px) translate3d(100px, 0px, -30px);
+        opacity: 0.5;
+    }
+    50% {
+        z-index: 2;
+        transform: perspective(100px) translate3d(400px, 0px, -30px);
+    }
+    100% {
+        z-index: 2;
+        transform: perspective(100px) translate3d(0px, 0px, 0px);
+        opacity: 1;
+    }
+}
+
+@keyframes foregrounding-sx {
+    0% {
+        z-index: 1;
+        transform: perspective(100px) translate3d(-100px, 0px, -30px);
+        opacity: 0.5;
+    }
+    50% {
+        z-index: 2;
+        transform: perspective(100px) translate3d(-400px, 0px, -30px);
+    }
+    100% {
+        z-index: 2;
+        transform: perspective(100px) translate3d(0px, 0px, 0px);
+        opacity: 1;
+    }
+}
+
+/*   Alerts Style   */
+
+#useralert, #successalert {
+    top: 0;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    text-align: left;
+    z-index: 50;
+    right: 0;
+    width: 20%;
+    margin: 0;
+}
+
+#useralert p, #successalert p {
+    font-size: 18px;
+    color: #664d03;
+    text-transform: capitalize;
+    margin-bottom: 0;
+}
+
+#successalert p {
+    text-align: center;
+    padding-top: 10px;
+}
+
+#successalert {
+    text-align: right;
+}
+
+#succ_span {
+    line-height: 20%;
+}
+
+#alert_uname {
+    display: initial;
+    font-size: 18px;
+    color: #664d03;
+    margin-bottom: 0;
+}
+
+/*   Transitions   */
+
+.top-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    left: 0;
+    bottom: auto;
+    right: auto;
+    background: #6c567b;
+    transition: all 1.5s cubic-bezier(0.6, 0.05, 0.4, 1);
+}
+
+.top-layer.active {
+    top: 100%;
+}
+
+.top-layer--2 {
+    background: #393e46;
+    transition-delay: 0.8s;
+}
+
+.top-layer--3 {
+    background: #6c5b7b;
+    transition-delay: 0.6s;
+}
+
+.top-layer--4 {
+    background: #c06c84;
+    transition-delay: 0.4s;
+}
+
+.top-layer--5 {
+    background: #f67280;
+    transition-delay: 0.2s;
+}
+
+.bottom-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    left: 0;
+    bottom: auto;
+    right: auto;
+    background: #48466d;
+    transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.bottom-layer.active {
+    top: -100%;
+}
+
+.bottom-layer--2 {
+    background: #ecf3a3;
+    transition-delay: 0.12s;
+}
+
+.bottom-layer--3 {
+    background: #95a792;
+    transition-delay: 0.4s;
+}
